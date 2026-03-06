@@ -1,0 +1,32 @@
+name: Déploiement GitOps
+
+on:
+  push:
+    branches: [ main ]
+    paths:
+      - 'src/**'
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    runs-on: self-hosted
+    environment: production
+
+    steps:
+    - name: Récupération du code
+      uses: actions/checkout@v4
+
+    - name: Informations système
+      run: |
+        echo "Runner: $(hostname)"
+        echo "Dossier de travail: $(pwd)"
+
+    - name: Préparation du dossier de déploiement
+      run: |
+       sudo mkdir -p /var/www/monsite
+        sudo chown -R $USER:$USER /var/www/monsite
+
+    - name: Déploiement des fichiers
+      run: |
+        cp -rv src/* /var/www/site/name: Déploiement GitOps
+
