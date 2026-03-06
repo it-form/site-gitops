@@ -85,3 +85,17 @@ li {
     font-weight: bold;
     color: #ffd700;
 }
+
+.highlight {
+    background: yellow;
+    color: black;
+    padding: 10px;
+    border-radius: 5px;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+}
