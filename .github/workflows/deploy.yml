@@ -23,8 +23,8 @@ jobs:
 
     - name: Préparation du dossier de déploiement
       run: |
-       sudo mkdir -p /var/www/monsite
-        sudo chown -R $USER:$USER /var/www/monsite
+       sudo mkdir -p /var/www/site
+        sudo chown -R $USER:$USER /var/www/site
 
     - name: Déploiement des fichiers
       run: |
