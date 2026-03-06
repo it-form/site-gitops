@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Status GitOps</title>
+    <meta http-equiv="refresh" content="5">
+</head>
+<body>
+    <h1>Status du déploiement</h1>
+    <pre>
+<?php
+echo "Dernier déploiement : " . file_get_contents('/var/www/site/version.txt');
+echo "\n\nFichiers déployés :\n";
+system('ls -la /var/www/site/');
+?>
+    </pre>
+</body>
+</html>
+
