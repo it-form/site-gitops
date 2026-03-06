@@ -28,5 +28,5 @@ jobs:
 
     - name: Déploiement des fichiers
       run: |
-        cp -rv src/* /var/www/site/name: Déploiement GitOps
+        cp -rv src/* /var/www/site
 
